@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Layout.ModProductController">
+    <!-- logo image designed by Israel Arvanitas -->
+    <ImageView
+            fx:id="imageView"
+            fitHeight="150.0"
+            fitWidth="200.0"
+            layoutX="600.0"
+            layoutY="10.0"
+            pickOnBounds="true"
+            preserveRatio="true"
+    >
+    </ImageView>
+    <TableView fx:id="tableModProductAdd" layoutX="360.0" layoutY="125.0" prefHeight="175.0" prefWidth="450.0">
+        <columns>
+            <TableColumn fx:id="tableModProductAddID" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="tableModProductAddName" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="tableModProductAddInv" prefWidth="100.0" text="Inv." />
+            <TableColumn fx:id="tableModProductAddPrice" prefWidth="100.0" text="Price" />
+        </columns>
+    </TableView>
+    <TableView fx:id="tableModProductDelete" layoutX="360.0" layoutY="375.0" prefHeight="175.0" prefWidth="450.0">
+        <columns>
+            <TableColumn fx:id="tableModProductDeleteID" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="tableModProductDeleteName" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="tableModProductDeleteInv" prefWidth="100.0" text="Inv." />
+            <TableColumn fx:id="tableModProductDeletePrice" prefWidth="100.0" text="Price" />
+        </columns>
+    </TableView>
+    <Label fx:id="lblModProductScreen" layoutX="37.0" layoutY="21.0" text="Modify Product">
+        <font>
+            <Font name="System Bold" size="23.0" />
+        </font>
+    </Label>
+
+    <Button fx:id="btnModProductSearch" layoutX="290.0" layoutY="27.0" mnemonicParsing="false" onAction="#search" text="Search" />
+    <TextField fx:id="txtModProductSearch" layoutX="410.0" layoutY="27.0" prefHeight="15.0" prefWidth="150.0" />
+    <Button fx:id="btnModProductClear" layoutX="345.0" layoutY="27.0" mnemonicParsing="false" onAction="#clearSearch" prefHeight="25.0" prefWidth="60.0" text="Clear" />
+
+    <Label fx:id="lblModProductID" layoutX="20.0" layoutY="118.0" text="ID">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblModProductIDNum" alignment="CENTER" layoutX="77.0" layoutY="108.0" prefHeight="40.0" prefWidth="150.0" style="-fx-border-width: 1; -fx-border-color: black; -fx-border-style: solid; -fx-padding: 5;" text="Auto Gen - Disabled">
+        <font>
+            <Font name="System Italic" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblModProductName" layoutX="20.0" layoutY="171.0" text="Name">
+        <font>
+            <Font size="14.0" />
+        </font></Label>
+    <TextField fx:id="txtModProductName" layoutX="77.0" layoutY="161.0" prefHeight="40.0" prefWidth="150.0" promptText="Product Name">
+        <font>
+            <Font name="System Italic" size="14.0" />
+        </font></TextField>
+    <Label fx:id="lblModProductInv" layoutX="20.0" layoutY="224.0" text="Inv">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtModProductInv" layoutX="77.0" layoutY="214.0" prefHeight="40.0" prefWidth="150.0" promptText="Inv">
+        <font>
+            <Font name="System Italic" size="14.0" />
+        </font>
+    </TextField>
+    <Label fx:id="lblModProductPrice" layoutX="20.0" layoutY="277.0" text="Price">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtModProductPrice" layoutX="77.0" layoutY="267.0" prefHeight="40.0" prefWidth="150.0" promptText="Price">
+        <font>
+            <Font name="System Italic" size="14.0" />
+        </font></TextField>
+    <Label fx:id="lblModProductMin" layoutX="20.0" layoutY="330.0" text="Min">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtModProductMin" layoutX="77.0" layoutY="320.0" prefHeight="40.0" prefWidth="100.0" promptText="Min">
+        <font>
+            <Font name="System Italic" size="14.0" />
+        </font>
+    </TextField>
+    <Label fx:id="lblModProductMax" layoutX="187.0" layoutY="330.0" text="Max">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtModProductMax" layoutX="226.0" layoutY="320.0" prefHeight="40.0" prefWidth="100.0" promptText="Max">
+        <font>
+            <Font name="System Italic" size="14.0" />
+        </font></TextField>
+
+    <Button fx:id="btnModProductAdd" layoutX="725.0" layoutY="310.0" mnemonicParsing="false" onAction="#modProductAdd" text="Add Product" />
+    <Button fx:id="btnModProductDelete" layoutX="713.0" layoutY="560.0" mnemonicParsing="false" onAction="#modProductDelete" text="Delete Product" />
+    <Button fx:id="btnModProductSave" layoutX="400.0" layoutY="600.0" mnemonicParsing="false" onAction="#modProductSave" prefHeight="35.0" prefWidth="75.0" text="Save" />
+    <Button fx:id="btnCancel" layoutX="500.0" layoutY="600.0" mnemonicParsing="false" onAction="#modProductCancel" prefHeight="35.0" prefWidth="75.0" text="Cancel" />
+    <Button fx:id="btnHome" layoutX="600.0" layoutY="600.0" mnemonicParsing="False" onAction="#openHomeScreen" prefHeight="35.0" prefWidth="75.0" text="Home"/>
+    <Button fx:id="btnExit" layoutX="700.0" layoutY="600.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="35.0" prefWidth="75.0" text="Exit" />
+</AnchorPane>
